@@ -117,32 +117,6 @@ double** Approximation::GetA(double* B, double* D, int n)
 	return A;
 }
 
-//void Approximation::SLU(double** A, double* C, int n)
-//{
-//	for (int i = 1; i < n; i++) // Прямой ход метода Гаусса
-//	{
-//		for (int j = i; j < n; j++)
-//		{
-//			double m = A[j][i - 1] / A[i - 1][i - 1];
-//
-//			for (int k = 0; k < n + 1; k++)
-//			{
-//				A[j][k] = A[j][k] - m * A[i - 1][k];
-//			}
-//		}
-//	}
-//
-//	for (int i = n - 1; i >= 0; i--)// Обратный ход метода Гаусса
-//	{
-//		C[i] = A[i][n] / A[i][i];
-//
-//		for (int j = n - 1; j > i; j--)
-//		{
-//			C[i] -= A[i][j] * C[j] / A[i][i];
-//		}
-//	}
-//}
-
 void Approximation::SLU(double** A, double* C, int n)
 {
 	double Amax, Pr;
