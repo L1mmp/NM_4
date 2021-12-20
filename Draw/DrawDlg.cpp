@@ -113,11 +113,11 @@ void CDrawDlg::OnBnClickedOk()
 	appr.GetPointsX(xPoints, a, b, m);
 	appr.RandomiseF(f, xPoints, m);
 
-	for (int i = 0; i < 1000; i++)
+	for (int i = 0; i < 200; i++)
 	{
 		X.push_back(x);
 		ApproxFunc.push_back(appr.Approximate(x, a, b, m, n));
-		OriginalFunc.push_back(pow(M_E, x) * cos(x));
+		OriginalFunc.push_back(pow(M_E, -x) * cos(x));
 		x += 0.01;
 	}
 	for (int i = 0; i < m; i++)

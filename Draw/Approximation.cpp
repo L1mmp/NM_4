@@ -24,7 +24,7 @@ double Approximation::Approximate(double x, double a, double b, int m, int n)
 
 	double apprPolinom = 0.0;
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n + 1; i++)
 	{
 		apprPolinom += C[i] * pow(x, i);
 	}
